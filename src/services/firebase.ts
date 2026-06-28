@@ -30,16 +30,17 @@ import { UserProfile, CartItem, Address, Order } from '../types';
 // Web App Configuration
 const env = (import.meta as any).env || {};
 const firebaseConfig = {
-  apiKey: env.VITE_FIREBASE_API_KEY || "AIzaSyDwdQeUbajO5n1wYBGRLQxel8U9DTYHOJ0",
-  authDomain: env.VITE_FIREBASE_AUTH_DOMAIN || "ace-hash-82fsp.firebaseapp.com",
-  projectId: env.VITE_FIREBASE_PROJECT_ID || "ace-hash-82fsp",
-  storageBucket: env.VITE_FIREBASE_STORAGE_BUCKET || "ace-hash-82fsp.firebasestorage.app",
-  messagingSenderId: env.VITE_FIREBASE_MESSAGING_SENDER_ID || "95789925695",
-  appId: env.VITE_FIREBASE_APP_ID || "1:95789925695:web:4fa509884d19fae41cbf8a"
+  apiKey: env.VITE_FIREBASE_API_KEY,
+  authDomain: env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: env.VITE_FIREBASE_APP_ID
 };
 
 // Initialize Firebase
 const app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApp();
+console.log(firebaseConfig);
 const auth = getAuth(app);
 
 // Use custom Firestore Database ID if custom Firebase project is configured, otherwise use fallback AI Studio DB ID
