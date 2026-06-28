@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@1,500;1,700;1,900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, Cambria, serif;
+}
+
+/* Light theme overrides - A masterclass in premium, professional UI design */
+.light body,
+.light .bg-\[\#050505\] {
+  background-color: #f8fafc !important; /* Premium Slate 50 canvas */
+  color: #0f172a !important; /* Deep Slate 900 for high-contrast reading */
+}
+
+/* Card panel backgrounds - Converts dark cards into sleek white bento cards with micro-shadows */
+.light .bg-\[\#0b0b0b\],
+.light .bg-\[\#0c0c0c\],
+.light .bg-\[\#0d0d0d\],
+.light .bg-\[\#090909\],
+.light .bg-\[\#0b0b0b\]\/90,
+.light .bg-\[\#0d0d0d\]\/90,
+.light .bg-\[\#090909\]\/95 {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: rgba(15, 23, 42, 0.06) !important;
+  box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.04), 0 1px 3px rgba(15, 23, 42, 0.02) !important;
+}
+
+/* Highlighted or nested sub-panels in light mode */
+.light .bg-white\/5 {
+  background-color: rgba(15, 23, 42, 0.035) !important; /* Soft gray background instead of black */
+}
+
+.light .bg-white\/10,
+.light .bg-black\/30,
+.light .bg-black\/40 {
+  background-color: rgba(15, 23, 42, 0.06) !important;
+}
+
+.light .bg-white\/15,
+.light .bg-white\/20 {
+  background-color: rgba(15, 23, 42, 0.08) !important;
+}
+
+.light .bg-white\/\[0\.01\] {
+  background-color: rgba(15, 23, 42, 0.01) !important;
+}
+
+/* Borders in light mode */
+.light .border-white\/5 {
+  border-color: rgba(15, 23, 42, 0.04) !important;
+}
+
+.light .border-white\/10 {
+  border-color: rgba(15, 23, 42, 0.08) !important;
+}
+
+.light .border-white\/20 {
+  border-color: rgba(15, 23, 42, 0.15) !important;
+}
+
+/* Text class overrides in light mode */
+.light .text-slate-100 {
+  color: #0f172a !important; /* Slate 900 for prime titles */
+}
+
+.light .text-slate-200 {
+  color: #1e293b !important; /* Slate 800 for sub-headers */
+}
+
+.light .text-slate-300 {
+  color: #334155 !important; /* Slate 700 for readable body text */
+}
+
+.light .text-slate-400 {
+  color: #475569 !important; /* Slate 600 for descriptions & metadata */
+}
+
+.light .text-slate-500 {
+  color: #64748b !important; /* Slate 500 for captions & labels */
+}
+
+.light .text-slate-600 {
+  color: #94a3b8 !important; /* Slate 400 for highly muted elements */
+}
+
+.light .text-slate-700 {
+  color: #cbd5e1 !important; /* Soft Slate 300 for inactive stars and elements */
+}
+
+/* Override default white text into dark slate, except for orange buttons/colored badges */
+.light .text-white {
+  color: #0f172a !important;
+}
+
+/* Ensure price text in light mode has excellent contrast (orange-500/600 is optimal) */
+.light .text-orange-400 {
+  color: #ea580c !important; /* Warm, highly readable orange-600 */
+}
+
+.light .text-orange-500 {
+  color: #f97316 !important;
+}
+
+/* Exclude colored/orange buttons from getting dark text, they must keep high contrast black text */
+.light .bg-orange-500 *,
+.light .bg-orange-500,
+.light .bg-yellow-500\/10 *,
+.light .bg-emerald-500\/10 *,
+.light .bg-red-500\/10 * {
+  color: inherit !important;
+}
+
+/* Solid high-contrast buttons (white with black text in dark mode) translate into beautiful deep-slate-900 buttons in light mode */
+.light .bg-white\.text-black,
+.light .bg-white {
+  background-color: #0f172a !important;
+  color: #ffffff !important;
+}
+
+.light .bg-white.text-black,
+.light .bg-white .text-black,
+.light button.bg-white {
+  color: #ffffff !important;
+}
+
+/* Hover and interactive classes in light mode */
+.light .hover\:bg-white\/5:hover {
+  background-color: rgba(15, 23, 42, 0.035) !important;
+}
+
+.light .hover\:bg-white\/10:hover {
+  background-color: rgba(15, 23, 42, 0.06) !important;
+}
+
+.light .hover\:bg-white\/20:hover {
+  background-color: rgba(15, 23, 42, 0.1) !important;
+}
+
+.light .hover\:text-white:hover {
+  color: #0f172a !important;
+}
+
+.light .hover\:border-white\/20:hover {
+  border-color: rgba(15, 23, 42, 0.16) !important;
+}
+
+.light .hover\:border-white\/50:hover {
+  border-color: rgba(15, 23, 42, 0.35) !important;
+}
+
+/* Header & navigation in light mode */
+.light header,
+.light nav {
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(12px) !important;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06) !important;
+}
+
+.light .fixed.inset-0.top-20.bg-black\/95 {
+  background-color: rgba(255, 255, 255, 0.98) !important;
+}
+
+/* Footer in light mode */
+.light footer {
+  background-color: #f1f5f9 !important;
+  border-top-color: rgba(15, 23, 42, 0.05) !important;
+}
+
+.light footer .text-slate-500 {
+  color: #64748b !important;
+}
+
+.light footer .text-slate-600 {
+  color: #94a3b8 !important;
+}
+
+/* Dropdown menus & overlays (like account dropdown) */
+.light .absolute.right-0.mt-3.rounded-2xl {
+  background-color: #ffffff !important;
+  border-color: rgba(15, 23, 42, 0.08) !important;
+  box-shadow: 0 10px 40px -10px rgba(15, 23, 42, 0.12), 0 2px 10px rgba(15, 23, 42, 0.04) !important;
+}
+
+/* Select, Inputs & Textareas */
+.light select,
+.light input,
+.light textarea {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: rgba(15, 23, 42, 0.12) !important;
+}
+
+.light select option {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+}
+
+.light input::placeholder,
+.light textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* Dialog and Side Drawer backdrops */
+.light .bg-black\/80 {
+  background-color: rgba(15, 23, 42, 0.35) !important;
+}
+
+.light .bg-black\/75 {
+  background-color: rgba(15, 23, 42, 0.3) !important;
+}
+
+/* Scrollbars */
+.light .scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: rgba(15, 23, 42, 0.12) !important;
+}
+
+.light .scrollbar-thin::-webkit-scrollbar-track {
+  background-color: rgba(15, 23, 42, 0.02) !important;
+}
+

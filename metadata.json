@@ -1,0 +1,6 @@
+{
+  "name": "Nexus Core",
+  "description": "A modern production-ready e-commerce web application with Firebase Authentication, Firestore database persistence, search, categories, cart management, and user dashboard.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
